@@ -1,3 +1,4 @@
+import "./Message.css"
 
 function Message ({username, message, time }){
 
