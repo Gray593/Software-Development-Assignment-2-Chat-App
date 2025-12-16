@@ -3,10 +3,9 @@ export default function Message ({username, message, time, currentUser }){ //the
     return( //the below line determines the classname based on who the sender of the message is this is used for css styling
         <div className={`messageBody ${isMe ? "me" : "other" }`}> 
             <p className="messageContent">{message}</p>
-            <p className="sender">{username}</p>
-            <p className="timeStamp">{time}</p>
+            <p className={`sender ${isMe ? "meS" : "otherS"}` }>{username}</p>
+            <p className={`timeStamp ${isMe ? "meT" : "otherT"}` }>{time}</p>
         </div>
     )
-    
 }
 

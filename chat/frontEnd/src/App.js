@@ -40,16 +40,34 @@ export default function App() { //main function of the program that is rendered 
   }, [])
 
   if (!joined) { //if the user has not joined (the joined variable is false) render the following
-    return (
-      <div className="App joinScreen">
-        <h2>Enter Name</h2>
-        <input 
-          placeholder="Username"
-          className="userInput"
-          onChange={(e)=> setUsername(e.target.value)} // when anything is input update the username variable
+  return (
+      <div className="welcomeScreen">
+        <p className="welcomeText">
+          Hi
+          <span className="nameWrapper">
+            <span className="userName">
+              {username}
+            </span>
+            <span className="cursor">|</span>
+          </span>
+          ,
+          <div>Welcome to </div> 
+          <div>the mobile </div>
+          <div>group chat </div> 
+          <div>web app</div>
+        </p>
+
+        <input
+          className="welcomeInput"
+          placeholder="Input Your Name Here"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
-        <button onClick={joinChat} className="sendButton">Join</button> 
-      </div> //above is the join button that runst the joinChat function when clicked 
+
+        <button className="startButton" onClick={joinChat}>
+          Get Started
+        </button>
+      </div>
     )
   }
 
@@ -74,7 +92,7 @@ export default function App() { //main function of the program that is rendered 
       <div className='newMessage'>
         <input className='userInput'/>
         <button className='sendButton' onClick={handleClick}> 
-          S
+          Send
         </button>
       </div>
     </div>
