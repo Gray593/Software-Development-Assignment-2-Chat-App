@@ -44,14 +44,16 @@ body {
   border-radius: 50px;
   background-color: var(--secondary-color);
   color:white;
-
-
 }
 .userInput{
   height: 30px;
   width: 75%;
   background-color: var(--background-colour);
   border-radius: 50px;
+  color: white;
+  padding-left: 10px;
+}
+.userInput::placeholder{
   color: white;
 }
 input{
@@ -128,6 +130,7 @@ button{
   color: white;
   line-height: 1.3;
   width: 75%;
+  margin-bottom: 40%;
 }
 
 .nameWrapper {
@@ -155,14 +158,20 @@ button{
 .startButton{
   background-color: var(--secondary-color);
   color: var(--background-colour);
-  width: 70%;
-  height: 20px;
-  border-radius: 10px;
+  width: 75%;
+  height: 35px;
+  border-radius: 18px;
 }
 .welcomeInput{
   background-color: white;
   color: var(--background-colour);
-  width: 70%;
-  height: 20px;
-  border-radius: 10px;
+  width: 75%;
+  height: 35px;
+  border-radius: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
+.welcomeInput::placeholder{
+  color: var(--background-colour);
 }

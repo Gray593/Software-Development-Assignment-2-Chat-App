@@ -90,7 +90,7 @@ export default function App() { //main function of the program that is rendered 
       </div>
 
       <div className='newMessage'>
-        <input className='userInput'/>
+        <input className='userInput' placeholder="Input Your Message Here"/>
         <button className='sendButton' onClick={handleClick}> 
           Send
         </button>
