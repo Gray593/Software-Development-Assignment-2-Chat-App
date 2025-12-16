@@ -23,8 +23,8 @@ io.on("connection", (socket) => {//when a user connects
         users-- // subtratcs one from users
         console.log("A user disconnected") // console logs a user as disconnected useful when testing
     })
-});
+})
 
 server.listen(3001, () => { // starts the server on port 3001
     console.log("Server running on port 3001") //console logs that the server is online
-});
+})
