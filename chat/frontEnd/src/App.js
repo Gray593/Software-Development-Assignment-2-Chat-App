@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react'
 import Message from './components/Message'
 import io from "socket.io-client"
 
-const socket = io("http://localhost:3001")
+const socket = io("http://localhost:3001") //creates a web socket connection to the server
 
-export default function App() {
-  const [messages, setMessages] = useState([])
+export default function App() { //main function of the program that is rendered inside index js
+  const [messages, setMessages] = useState([]) //lines 8, 9 and 10 all use the react useState hook this is used as a form of dynamic variable, in this instance the three variable being created are messages, username and joined
   const [username, setUsername] = useState("")
   const [joined, setJoined] = useState(false)
 
-  function joinChat() {
+  function joinChat() {// the join chat function ensures the users input name isnt blank or just spaces
     if (username.trim() !== "") {
-      setJoined(true)
+      setJoined(true)//if the username is valid 
     }
   }
 
