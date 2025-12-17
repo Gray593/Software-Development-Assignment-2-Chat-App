@@ -8,20 +8,30 @@ This project is a web chat app optimised for mobile use. This chat app is split 
 ### 1.2 Install Instructions 
 To install this project first open terminal and input the following command. 
 ``` 
-git clone https://github.com/Gray593/Software-Development-Assignment-2-Chat-App" 
+git clone https://github.com/Gray593/Software-Development-Assignment-2-Chat-App 
 ``` 
 Next open another terminal instance, this is done as a seperate terminal instance is needed for both the back end and front end. Then run these commands in the terminal you have decided is for the front end. 
 ```
 cd frontEnd
 npm i 
 ``` 
-Next switch to the back end terminal and run the following 
+Next switch to the back end terminal and run the following.
 ```
 cd backEnd
 npm i
 
 ```
+Do not kill either terminal instance after this as both are needed to run the program.
 ### 1.3 How to Run
+Using the terminals create in the projects installation, run the following command in the "frontEnd" terminal 
+```
+npm start
+``` 
+Next run the follwoing command in the "backEnd" terminal 
+```
+node backEnd.js
+```
+the front end may take a second to start but dont worry just switch to the back end and run the back end  command as both terminals can run simultaneously.
 
 ### 1.4 Group Contributers
 
