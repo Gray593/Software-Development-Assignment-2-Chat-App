@@ -34,9 +34,13 @@ node backEnd.js
 the front end may take a second to start but dont worry just switch to the back end and run the back end  command as both terminals can run simultaneously.
 
 ### 1.4 Group Contributers
+I am the sole contributer to this project.
 
 ## 2.0 Design Breakdown
-
+### 2.1 Wireframes
+### 2.2 Flowchart
+### 2.3 UML Diagram
+### 2.4 Pseudocode
 ## 3.0 Functional Breakdown
 
 ## 4.0 User Profiles and Requirements
