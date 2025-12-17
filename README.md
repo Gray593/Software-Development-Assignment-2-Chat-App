@@ -37,10 +37,18 @@ the front end may take a second to start but dont worry just switch to the back 
 I am the sole contributer to this project.
 
 ## 2.0 Design Breakdown
+In this section several aspects of the design will be planned out to streamline development
 ### 2.1 Wireframes
+![Design Board](./ReportImages/DesignBoard.png)
 ### 2.2 Flowchart
-### 2.3 UML Diagram
+![Flow Chart](./ReportImages/FlowChart.png)
+### 2.3 UML Class Diagram
+![UML Class Diagram](./ReportImages/UmlClassDiagram.png)
 ### 2.4 Pseudocode
+#### 2.4.1 Client Pseudocode
+![Client Pseudocode](./ReportImages/PseudocodeClient.png)
+#### 2.4.2 Server Pseudocode
+![Server Pseudocode](./ReportImages/PseudocodeServer.png)
 ## 3.0 Functional Breakdown
 
 ## 4.0 User Profiles and Requirements
