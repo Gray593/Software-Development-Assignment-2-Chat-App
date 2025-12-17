@@ -52,10 +52,13 @@ In this section several aspects of the design will be planned out to streamline 
 ## 3.0 Functional Breakdown
 ### 3.1 The App Function
 The App function is the main function of most react applications, in this instance it contains all of the Html and JavaScript for the front-end of this project except the message component, which is still called in the return of this function. As this function encompasses most of the application only sections of code not included in other functions will be analysed in this section.
+
 ![App Function](./ReportImages/AppCode.png)
+
 The only code in this function that is not contained with in another function are the react hooks and the return.
 #### 3.1.1 UseState React Hooks
 The useState hook is Reacts approach to dynamic variables, in this instance the App function uses three use state hooks to sore the messages array, the username string and the joined boolean that is only set to True once the user inputs a valid name. The use state hook contains two components that can be utilised the first is a variable that can be used to reference the value of the hook and the second is a function that allows the variables value to be changed. This is great as it allows the page to update in real time and prevents the need to reload the page that would be present in base JavaScript. To help better understand the useState hook both the react documentation (React, 2025b)and an introductory video to useState by Web Dev Simplified were used throughout development (Web Dev Simplified,2020).
+
 ![UseState](./ReportImages/UseState.png)
 #### 3.1.2 UseEffect React Hooks
 The second React hook utilised is the useEffect hook. The useEffect runs the code within the function within the hook whenever the condition at the end of the hook is met. In this instance the useEffect hook is utilised to update the messages array whenever a new message is received by adding the new message to the end of the array containing the already received messages. To help better understand the useEffect hook both the react documentation (React, 2025a) and an introductory video to useEffect by Cosden Solutions were used throughout development (Cosden Solutions,2023).
@@ -63,6 +66,7 @@ The second React hook utilised is the useEffect hook. The useEffect runs the cod
 ![UseEffect](./ReportImages/UseEffect.png)
 #### 3.1.3 Return Section
 The final sections of the app function that aren't other functions are the two returns at the end of the function. The First return function only displays when the joined variable is equal to false. This return is responsible for displaying the initial welcome page that prompts the user to input there name. While developing this section it was difficult to space the text properly as it is in the design. To remedy this issue the text is split into multiple divs to ensure it is always spaced properly.
+
 ![AppWelcomeScreenCode](./ReportImages/AppWelcomeScreen.png)
 ![AppWelcomeScreen](./ReportImages/AppWelcomePage.png)
 
@@ -71,8 +75,34 @@ The second return displays the messaging interface and is only displayed after t
 ![AppMessageScreenCode](./ReportImages/AppMessageScreen.png)
 ![AppMessageScreen](./ReportImages/AppMessagePage.png)
 
-## 4.0 User Profiles and Requirements
+### 3.2 joinChat Function
+The joinChat function is very simple, it is called when the get started button is pressed and ensures the username that has been entered is valid by taking out all the spaces and checking if it still has characters inside. If this condition is met the joined state is set to True and the messaging page of the web app is rendered.
 
+![JoinChatFunction](./ReportImages/JoinChat.png)
+
+### 3.3 handleClick Function 
+The handleClick function is called when the send button on the messaging page is pressed. It first finds the input field in the DOM then ensures the input is valid in the same way the username is checked. When developing making the check a function was considered  as the same check is used in two places but was deemed unnecessary as the process is very short. Then the text is assigned to its corresponding value in the message object along with time and sender this is then sent to the server. After this the input box is cleared to allow for the process to repeat itself. When developing the socket.io documentation was very helpful (Socket.io,2025b).
+
+![HandleClickFunction](./ReportImages/HandleClick.png)
+
+### 3.4 Messaging Component
+
+The messaging component is used in the second return function to render the messages in the messaging interface. Structure wise the component is very similar to a function with Props being passed into the component being used to convey information from the main page to the component. Within the html temperate literals are used to determine the class name for styling based on the sender of the message. To accomplish this the MDN documentation was very helpful (Mozilla, 2025)
+
+![Message Component](./ReportImages/MessageComp.png)
+
+### 3.5 Server Breakdown
+While not a function the server file found in backEnd.js is essential to this web apps functionality. The server allows multiple users to communicate between each other and is the centerpoint of this application. This section would have been very hard to complete if not for the socket.io documentation (Socket.io,2025a). To start an express.js instance is created this is then wrapped in a http server which is assigned to the io variable as a new server to allow for websocket to connect to the application. This caused a lot of problems in development but was eventually solved through reading the above documentation and trial and error. Next the users variable is created this is very useful for testing as it counts the amount of clients connected to the server and can be essential in deducing whether an error is client or server side. The following lines in the "io.on" function manage the user count as users disconnect and reconnect and also broadcast messages to all connected clients. Finally the last lines specify which port the server is run on, this is only relevant locally and would need to be change if the project were to be hosted.
+
+![Server Code](./ReportImages/ServerCode.png)
+
+## 4.0 User Profiles and Requirements
+### 4.1 User Profiles
+![User Profile Matt](./ReportImages/UserProfileMatt.png)
+![User Profile Alice](./ReportImages/UserProfileAlice.png)
+### 4.2 User Requirements 
+### 4.3 System Requirements
 ## 5.0 Testing
 
 ## 6.0 Development Strategy Review  
+## 7.0 References
