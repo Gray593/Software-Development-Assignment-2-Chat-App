@@ -2,8 +2,8 @@ import express from "express"
 import http from "http"
 import {Server} from "socket.io"
 
-const app = express() //creates an express instance
-const server = http.createServer(app) //wraps the express instance in a http server to allow socket to connect
+const instance = express() //creates an express instance
+const server = http.createServer(instance) //wraps the express instance in a http server to allow socket to connect
 
 const io = new Server(server, { //creates the server
     cors: { origin: "*" }  //allows the react frontend to connect
