@@ -1,0 +1,57 @@
+//Client
+
+PROCEDURE ClientChatApp()
+    DECLARE messages : ARRAY
+    DECLARE username : STRING
+    DECLARE joined : BOOLEAN
+    DECLARE message : OBJECT
+
+    OUTPUT "Input Your Name Here"
+    username <- INPUT
+
+    CONNECT TO SERVER
+    joined <- TRUE
+    WHILE joined = TRUE
+        IF SERVER HAS NEW MESSAGE THEN
+            RECEIVE messageData FROM SERVER
+            messages APPEND messageData
+            OUTPUT messages
+      ENDIF
+
+      OUTPUT "Input Your Message Here"
+      INPUT messageText
+
+      IF messageText <> "" THEN
+        message <- NEW message(
+            username <- username
+            message <- messageText
+            time <- currentTime
+        )
+        SEND message TO SERVER
+        ENDIF
+    ENDWHILE
+ENDPROCEDURE
+
+//Server
+
+SERVER START
+
+DECLARE users : INTEGER <- 0
+
+WHILE SERVER IS ON  
+    IF USER CONNECTS THEN
+        users <- users + 1
+    ENDIF
+
+    IF MESSAGE RECEIVED THEN
+        SEND MESSAGE TO ALL CONNECTED USERS
+    ENDIF
+
+    IF USER DISCONNECTS THEN
+        users <- users - 1
+    ENDIF
+ENDWHILE
+
+SERVER END
+
+
