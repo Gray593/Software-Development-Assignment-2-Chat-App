@@ -32,7 +32,7 @@ export default function App() { //main function of the program that is rendered 
   }
 
   useEffect(() => { // this use effects live updates for users chat messages 
-    socket.on("chatMessage", (msg) => { // recieves chat message
+    socket.on("chatMessage", (msg) => { // receives chat message
       setMessages(prev => [...prev, msg])//adds the message to the messages array rerendering the page
     })
 
@@ -85,7 +85,7 @@ export default function App() { //main function of the program that is rendered 
             message={e.message} 
             time={e.time} 
             currentUser = {username}
-          /> // renders each message in the message array as a seperate message component 
+          /> // renders each message in the message array as a separate message component 
         )} 
       </div>
 

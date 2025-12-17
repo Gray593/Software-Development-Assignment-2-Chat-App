@@ -20,7 +20,7 @@ io.on("connection", (socket) => {//when a user connects
     })
 
     socket.on("disconnect", () => { // when a user disconnects
-        users-- // subtratcs one from users
+        users-- // subtracts one from users
         console.log("A user disconnected") // console logs a user as disconnected useful when testing
     })
 })

@@ -5,7 +5,7 @@
 ### 1.1 Project Introduction
 This project is a web chat app optimised for mobile use. This chat app is split into two folders, front end and backend. The front end utilises React a JavaScript Framework and css for styling as well as websockets to communicate between the client and the server. The back end is composed of an express JS application wrapped in a http server thus allowing websocket to communicate between the client and the server. The project is composed of two main screens the "Get Started" screen that loads when the user is yet to input a name and the chat room screen that is accessed once the user has input a name.
 
-### 1.2 Install Instructions 
+### 1.2 Installation Instructions 
 To install this project first open terminal and input the following command. 
 ``` 
 git clone https://github.com/Gray593/Software-Development-Assignment-2-Chat-App 
@@ -50,9 +50,29 @@ In this section several aspects of the design will be planned out to streamline 
 #### 2.4.2 Server Pseudocode
 ![Server Pseudocode](./ReportImages/PseudocodeServer.png)
 ## 3.0 Functional Breakdown
+### 3.1 The App Function
+The App function is the main function of most react applications, in this instance it contains all of the Html and JavaScript for the front-end of this project except the message component, which is still called in the return of this function. As this function encompasses most of the application only sections of code not included in other functions will be analysed in this section.
+![App Function](./ReportImages/AppCode.png)
+The only code in this function that is not contained with in another function are the react hooks and the return.
+#### 3.1.1 UseState React Hooks
+The useState hook is Reacts approach to dynamic variables, in this instance the App function uses three use state hooks to sore the messages array, the username string and the joined boolean that is only set to True once the user inputs a valid name. The use state hook contains two components that can be utilised the first is a variable that can be used to reference the value of the hook and the second is a function that allows the variables value to be changed. This is great as it allows the page to update in real time and prevents the need to reload the page that would be present in base JavaScript. To help better understand the useState hook both the react documentation (React, 2025b)and an introductory video to useState by Web Dev Simplified were used throughout development (Web Dev Simplified,2020).
+![UseState](./ReportImages/UseState.png)
+#### 3.1.2 UseEffect React Hooks
+The second React hook utilised is the useEffect hook. The useEffect runs the code within the function within the hook whenever the condition at the end of the hook is met. In this instance the useEffect hook is utilised to update the messages array whenever a new message is received by adding the new message to the end of the array containing the already received messages. To help better understand the useEffect hook both the react documentation (React, 2025a) and an introductory video to useEffect by Cosden Solutions were used throughout development (Cosden Solutions,2023).
+
+![UseEffect](./ReportImages/UseEffect.png)
+#### 3.1.3 Return Section
+The final sections of the app function that aren't other functions are the two returns at the end of the function. The First return function only displays when the joined variable is equal to false. This return is responsible for displaying the initial welcome page that prompts the user to input there name. While developing this section it was difficult to space the text properly as it is in the design. To remedy this issue the text is split into multiple divs to ensure it is always spaced properly.
+![AppWelcomeScreenCode](./ReportImages/AppWelcomeScreen.png)
+![AppWelcomeScreen](./ReportImages/AppWelcomePage.png)
+
+The second return displays the messaging interface and is only displayed after the user has input a valid username. This return manages to display every message in the messages array by mapping them to the corresponding message component. Unlike in the design the message now displays the time its sent rather than the date as this was deemed more relevant to everyday use.
+
+![AppMessageScreenCode](./ReportImages/AppMessageScreen.png)
+![AppMessageScreen](./ReportImages/AppMessagePage.png)
 
 ## 4.0 User Profiles and Requirements
 
 ## 5.0 Testing
 
-## 6.0 Development stratergy review 
+## 6.0 Development Strategy Review  
