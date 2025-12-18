@@ -101,8 +101,37 @@ While not a function the server file found in backEnd.js is essential to this we
 ![User Profile Matt](./ReportImages/UserProfileMatt.png)
 ![User Profile Alice](./ReportImages/UserProfileAlice.png)
 ### 4.2 User Requirements 
+* The system must allow users to join the chat by entering only a username, without requiring account creation or installation of additional software. 
+Link to User Profiles: Both Matt and Alice want to avoid lengthy onboarding processes and value quick access. 
+* The system must allow users to send and receive messages instantly with little to no delay.
+Link to User Profiles: Matt requires immediate responses to student questions, and Alice expects low-latency communication while working on site.
+* The application must be optmised for mobile.
+Link to User Profiles: Matt expects students to use their phones in class, and Alice uses the application while on the move.
+* The user interface must be snappy and responsive.
+Link to User Profiles: An unresponsive UI would frustrate Matt's students.
+* Message text must be displayed at a readable size and the colours used must be contrasting.
+Link to User Profiles: Alice identified small text as a frustration, and Matt works with students of varying abilities and impairments.
+* Application should allow users to maintain their privacy by only asking for there username.
+Link to User Profiles: Alice values privacy, and Matt is not allowed to compromise the students privacy.
+* The interface must be simple and easy to navigate for users with varying levels of technical ability.
+Link to User Profiles: Alice values privacy, and Matt wants to minimise barriers for student participation.
+* The user interface should use darker colours to prevent eyestrain.
+Link to User Profiles: Matt specifically identified bright interfaces as a source of discomfort during prolonged use.
 ### 4.3 System Requirements
+#### 4.3.1 Functional Requirements
+* The system will be accessible through a web browser without requiring software installation.
+* The system will use WebSockets to enable real-time messaging.
+* All users will receive every message that is sent.
+* Each message will have the senders username and time stamp attached
+* The clients will instantly display all received messages  
+#### 4.3.2 Non-Functional Requirements
+* Messages will be delivered with no delay ensuring the application performs as required.
+* The interface will be intuitive enabling anyone to use the app ensuring a high level of usability.
+* The application will use readable font sizes and high-contrast colours.
+* The interface will use a dark colour scheme to minimise eye strain.
+* The system will function consistently across all modern mobile browsers and while the web app will be optimised for mobile it should also run on desktop.
 ## 5.0 Testing
-
+![Testing page 1](./ReportImages/Testing1.png)
+![Testing page 2](./ReportImages/Testing2.png)
 ## 6.0 Development Strategy Review  
 ## 7.0 References

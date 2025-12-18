@@ -17,7 +17,7 @@ export default function App() { //main function of the program that is rendered 
 
   function handleClick() { // the handle click function sends the users message to the server
     const inputBox = document.getElementsByClassName("userInput")[0] //assigns the input box variable to the input box on the webpage
-    const input = inputBox.value //sets the input to the value within the inputbox
+    const input = inputBox.value //sets the input to the value within the input box
 
     if (input.trim() === "") return // if the input is blank or just spaces exit out the function
 
