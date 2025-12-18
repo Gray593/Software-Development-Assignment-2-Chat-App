@@ -133,5 +133,6 @@ Link to User Profiles: Matt specifically identified bright interfaces as a sourc
 ## 5.0 Testing
 ![Testing page 1](./ReportImages/Testing1.png)
 ![Testing page 2](./ReportImages/Testing2.png)
-## 6.0 Development Strategy Review  
-## 7.0 References
+## 6.0 Development Strategy Review 
+
+## 7.0 Evaluation
