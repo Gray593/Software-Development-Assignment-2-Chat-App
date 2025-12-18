@@ -90,7 +90,7 @@ The handleClick function is called when the send button on the messaging page is
 The messaging component is used in the second return function to render the messages in the messaging interface. Structure wise the component is very similar to a function with Props being passed into the component being used to convey information from the main page to the component. Within the html temperate literals are used to determine the class name for styling based on the sender of the message. To accomplish this the MDN documentation was very helpful (Mozilla, 2025)
 
 ![Message Component](./ReportImages/MessageComp.png)
-
+![Message Component](./ReportImages/MessageScreenshot.png)
 ### 3.5 Server Breakdown
 While not a function the server file found in backEnd.js is essential to this web apps functionality. The server allows multiple users to communicate between each other and is the centerpoint of this application. This section would have been very hard to complete if not for the socket.io documentation (Socket.io,2025a). To start an express.js instance is created this is then wrapped in a http server which is assigned to the io variable as a new server to allow for websocket to connect to the application. This caused a lot of problems in development but was eventually solved through reading the above documentation and trial and error. Next the users variable is created this is very useful for testing as it counts the amount of clients connected to the server and can be essential in deducing whether an error is client or server side. The following lines in the "io.on" function manage the user count as users disconnect and reconnect and also broadcast messages to all connected clients. Finally the last lines specify which port the server is run on, this is only relevant locally and would need to be change if the project were to be hosted.
 
@@ -131,6 +131,7 @@ Link to User Profiles: Matt specifically identified bright interfaces as a sourc
 * The interface will use a dark colour scheme to minimise eye strain.
 * The system will function consistently across all modern mobile browsers and while the web app will be optimised for mobile it should also run on desktop.
 ## 5.0 Testing
+The aim of this section is to summarise the testing strategy and the outcome of the testing process. Overall I believe the testing went well. As can be observed in the testing screenshots seen below the chat app passed all tests. The testing methodology was acceptable but could be improved to incorporate unit testing to guarantee a higher level of performance.
 ![Testing page 1](./ReportImages/Testing1.png)
 ![Testing page 2](./ReportImages/Testing2.png)
 ## 6.0 Development Strategy Review 
